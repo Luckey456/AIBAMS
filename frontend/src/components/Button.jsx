@@ -1,33 +1,42 @@
-import React from "react";
+import React from 'react';
 
-const Button = ({ text = "Subscribe", onClick }) => {
+const Button = ({ size = 'small' }) => {
+  const sizeStyles = {
+    small: 'px-4 py-2 text-sm gap-2 rounded-xl shadow-sm',
+    medium: 'px-6 py-3 text-lg gap-3 rounded-2xl shadow-md',
+    large: 'px-8 py-4 text-xl gap-4 rounded-3xl shadow-lg',
+  };
+
+  const arrowSizes = {
+    small: 'w-2.5 h-2.5',
+    medium: 'w-3 h-3',
+    large: 'w-4 h-4',
+  };
+
+  const lineSizes = {
+    small: 'h-[1.5px] w-2.5 group-hover:w-1.5',
+    medium: 'h-[2px] w-3 group-hover:w-4',
+    large: 'h-[2.5px] w-4 group-hover:w-5',
+  };
+
+  const arrowHeadSizes = {
+    small: 'h-1.5 w-1.5 border-r-[1.5px] border-b-[1.5px] -top-[2.5px] group-hover:right-[-6px]',
+    medium: 'h-2 w-2 border-r-2 border-b-2 -top-[3.5px] group-hover:right-[-8px]',
+    large: 'h-2.5 w-2.5 border-r-[2.5px] border-b-[2.5px] -top-[4px] group-hover:right-[-10px]',
+  };
+
   return (
     <button
-    className="relative px-8 py-3 bg-black text-white font-semibold rounded-lg border-2 border-[#6060ff] 
-               hover:border-[#6060ff] transition-all duration-300 hover:shadow-[0_0_25px_12px_rgba(18,57,255,0.4)] 
-               active:scale-95 active:shadow-[0_0_15px_7px_rgba(18,57,255,0.7)] group"
-    onClick={onClick}
-  >
-      <span className="flex items-center space-x-2">
-        <span>{text}</span>
-        <svg
-          className="w-6 h-6 transition-transform duration-500 hover:translate-x-1"
-          aria-hidden="true"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clipRule="evenodd"
-            d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-            fillRule="evenodd"
-            fill="currentColor"
+      className={`group relative flex items-center ${sizeStyles[size]} hover:bg-gradient-to-r hover:from-[#bda114] hover:to-[#bda114] font-semibold hover:text-black transition-all duration-200 ease-in-out hover:scale-[1.02] bg-gradient-to-r from-[#111] to-[#333] focus:outline-none focus:ring-2 focus:ring-[#645bff] focus:ring-offset-2`}
+    >
+      <span className="relative z-10">Sign up</span>
+      <div className={`relative flex items-center justify-center ${arrowSizes[size]}`}>
+        <div className={`relative ${lineSizes[size]} bg-white/80 transition-all duration-200 group-hover:bg-white`}>
+          <div
+            className={`absolute ${arrowHeadSizes[size]} border-white transition-all duration-200 -rotate-40`}
           />
-        </svg>
-      </span>
-      <span
-        className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                   bg-gradient-to-r from-blue-500/20 to-blue-500/20"
-      ></span>
+        </div>
+      </div>
     </button>
   );
 };

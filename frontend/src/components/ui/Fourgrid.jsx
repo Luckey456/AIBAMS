@@ -74,10 +74,10 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
             viewBox="0 0 685 422" 
             fill="#0000FF" 
             filter="url(#glow)"
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", opacity: { duration: 1 } }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+            whileHover={{ scale: 1, transition: { duration: 0.3 } }}
           >
             <defs>
               <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
@@ -100,13 +100,13 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
                   <feMergeNode in="blur4_colored"/>
                   <feMergeNode in="SourceGraphic"/>
                 </feMerge>
-                <feDropShadow dx="0" dy="0" stdDeviation="30" floodColor="#0000FF" floodOpacity="0.8"/>
+                <feDropShadow dx="0" dy="0" stdDeviation="30" floodColor="#ffd302" floodOpacity="0.8"/>
               </filter>
             </defs>
-            <path d="M684.5 293.786L684.5 422L-6.10352e-05 422L-2.72891e-05 35.9897C-2.72891e-05 35.9897 63.9087 -56.2401 130.001 55C201 174.5 321.5 288 514.003 189C682.047 102.578 684.5 228.995 684.5 293.786Z" fill="#0000FF"/>
+            <path d="M684.5 293.786L684.5 422L-6.10352e-05 422L-2.72891e-05 35.9897C-2.72891e-05 35.9897 63.9087 -56.2401 130.001 55C201 174.5 321.5 288 514.003 189C682.047 102.578 684.5 228.995 684.5 293.786Z" fill="#ffd302"/>
             <defs>
               <radialGradient id="paint0_radial_88_1237" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.706 273.77) rotate(-90) scale(247.77 762.294)">
-                <stop stopColor="#BFFF11"/>
+                <stop stopColor="#D6FF11"/>
                 <stop offset="1" stopColor="#FFFF11"/>
               </radialGradient>
             </defs>
@@ -117,7 +117,7 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
       <motion.div
         className="bg-[#191919] p-8 relative h-full w-full text-white cursor-pointer overflow-hidden backdrop-blur-none"
         initial={{ scale: 1, backdropFilter: blurIntensity.initial, backgroundColor: "rgba(33, 33, 33, 0.99)", borderRadius: "40px", boxShadow: "0 0 0 rgba(0, 0, 255, 0)" }}
-        whileHover={{ borderRadius: "24px", scale: 1.01, backdropFilter: blurIntensity.hover, backgroundColor: "rgba(33, 33, 33, 0.5)", boxShadow: "0 8px 32px rgba(0, 0, 255, 0.2)" }}
+        whileHover={{ borderRadius: "40px", scale: 1, backdropFilter: blurIntensity.hover, backgroundColor: "rgba(33, 33, 33, 0.5)", boxShadow: "0 8px 32px rgba(0, 0, 255, 0.2)" }}
         transition={{ duration: 0.3, ease: "easeOut", backdropFilter: { duration: 0.4, ease: "easeInOut" }, backgroundColor: { duration: 0.4, ease: "easeInOut" }, boxShadow: { duration: 0.4, ease: "easeInOut" } }}
       >
         <NoiseTexture />
@@ -188,11 +188,11 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
             </div>
           )} */}
           
-          {hoverComponent && index === 1 && (
+          {/* {hoverComponent && index === 1 && (
             <div className="hover-component-container absolute inset-0 z-20 mt-40 ml-160">
               {hoverComponent}
             </div>
-          )}
+          )} */}
         </div>
       </motion.div>
     </div>

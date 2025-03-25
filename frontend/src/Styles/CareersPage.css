@@ -490,3 +490,133 @@
       padding: 20px 10px;
     }
   }
+  /* General Section Styling */
+.job-application-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0px;
+}
+
+.job-application-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.job-application-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Form Layout */
+.job-application-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.form-group span {
+  color: red;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+/* Name Fields */
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+/* File Upload Section */
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  text-align: center;
+  cursor: pointer;
+    border-radius: 5px;
+  transition: 0.3s;
+}
+
+.file-upload:hover {
+  border-color: #007bff;
+}
+
+.file-upload p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.file-upload span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Submit Button */
+.apply-btn {
+  grid-column: span 2;
+  padding: 12px;
+  background-color: #ffd302;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #b3b300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-application-form {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-btn {
+    grid-column: span 1;
+  }
+}

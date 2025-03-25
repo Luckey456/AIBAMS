@@ -6,7 +6,7 @@
     
     > div {
       animation: growAndFade 5s infinite ease-out;
-      background-color: rgb(88, 121, 233);
+      background-color: #ffee02;
       /* Keep border-radius for smoothness, but clip to semicircle */
       border-radius: 50%;
       height: 100%;

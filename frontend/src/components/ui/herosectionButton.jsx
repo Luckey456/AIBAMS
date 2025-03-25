@@ -7,8 +7,16 @@ const ButtonHero = ({
   showIcon = true,
   type = "button",
   disabled = false,
-  gradient = "from-blue-400 via-blue-500 to-blue-500"
+  gradient = "from-yellow-400 via-yellow-500 to-yellow-600",
+  size = "medium"  // Added size prop
 }) => {
+  // Define size variants
+  const sizeStyles = {
+    small: "px-4 py-2 text-sm",
+    medium: "px-6 py-[0.85rem] -mt-[0.5px] text-base",
+    large: "px-8 py-4 text-lg",
+  };
+
   return (
     <div className={`flex items-center justify-center ${className}`}>
       <div className="relative group">
@@ -17,10 +25,10 @@ const ButtonHero = ({
           onClick={onClick}
           disabled={disabled}
           aria-label={text}
-          className="relative inline-block p-px font-semibold leading-6 text-white    shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-101 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+          className="relative inline-block p-px font-semibold leading-6 text-white shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-101 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
         >
           <span className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100`} />
-          <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
+          <span className={`relative z-10 block ${sizeStyles[size]} rounded-xl bg-gray-900`}> {/* Updated base color and added size */}
             <div className="relative z-10 flex items-center space-x-2">
               <span className="transition-all duration-500 group-hover:translate-x-1">{text}</span>
               {showIcon && (

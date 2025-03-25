@@ -19,6 +19,7 @@ const AppRoutes = () => {
       <Route path="/about" element={<MainLayout showBackground={true}><About /></MainLayout>} />
       <Route path="/contact" element={<MainLayout showBackground={true}><Contact /></MainLayout>} />
       <Route path="/careers" element={<MainLayout showBackground={true}><Careers /></MainLayout>} />
+      <Route path="/aboutus" element={<MainLayout showBackground={true}><About /></MainLayout>} />
     </Routes>
   );
 };

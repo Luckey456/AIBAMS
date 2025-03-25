@@ -24,7 +24,7 @@ const BackgroundDots = () => {
         dots.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          radius: Math.random() * 20 + 150, // Larger blurred dots
+          radius: Math.random() * 20 + 180, // Larger blurred dots
           dx: (Math.random() - 0.5) * 0.8, // Slow movement
           dy: (Math.random() - 0.5) * 0.5,
           opacity: Math.random() * 0.3 , // Semi-transparent for blur effect
@@ -43,9 +43,9 @@ const BackgroundDots = () => {
       dots.forEach((dot) => {
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 128, 255,0.1)`; // Soft blue glow
-        ctx.shadowBlur = 80; // Strong blur
-        ctx.shadowColor = "rgba(0, 128, 255, 0.1)";
+        ctx.fillStyle = `rgba(255, 215, 0,0.15)`; // Soft blue glow
+        ctx.shadowBlur = 0; // Strong blur
+        ctx.shadowColor = "rgba(255, 215, 0 ,0.15)";
         ctx.fill();
         ctx.closePath();
       });

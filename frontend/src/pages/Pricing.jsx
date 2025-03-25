@@ -9,9 +9,8 @@ import "aos/dist/aos.css";
 const CustomButton = ({ text = "Subscribe", onClick, className = "" }) => {
   return (
     <button
-      className={`relative px-8 py-3 bg-black text-white font-semibold rounded-lg border-2 border-[#6060ff] 
-                 hover:border-[#6060ff] transition-all duration-300 hover:shadow-[0_0_25px_12px_rgba(18,57,255,0.4)] 
-                 active:scale-95 active:shadow-[0_0_15px_7px_rgba(18,57,255,0.7)] group ${className}`}
+      className={`relative px-8 py-3 bg-black !text-white font-semibold rounded-lg border-2 border-[#ffd302] 
+                 hover:border-[#ffd302] transition-all duration-300 active:scale-95 active:shadow-[0_0_15px_7px_rgba(255,211,2,0.7)]  group ${className}`}
       onClick={onClick}
     >
       <span className="flex items-center space-x-2">
@@ -32,7 +31,7 @@ const CustomButton = ({ text = "Subscribe", onClick, className = "" }) => {
       </span>
       <span
         className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                   bg-gradient-to-r from-blue-500/20 to-blue-500/20"
+                   bg-gradient-to-r from-yellow-500/20 to-yellow-500/20"
       ></span>
     </button>
   );
@@ -162,7 +161,7 @@ const Pricing = () => {
           Launch your creative business.
         </h2>
         <p
-          className="!text-[22px] text-gray-600 mt-10"
+          className="!text-[22px] text-white mt-10"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -175,7 +174,7 @@ const Pricing = () => {
               onClick={() => setBillingCycle("monthly")}
               className={`${
                 billingCycle === "monthly"
-                  ? "bg-[#3d6aff] text-white"
+                  ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-white"
                   : "bg-gray-200 hover:bg-gray-300 text-black"
               }`}
             />
@@ -184,7 +183,7 @@ const Pricing = () => {
               onClick={() => setBillingCycle("yearly")}
               className={`${
                 billingCycle === "yearly"
-                  ? "bg-[#3d6aff] text-white"
+                  ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-white"
                   : "bg-gray-200 hover:bg-gray-300 text-black"
               }`}
             />
@@ -276,7 +275,7 @@ const Pricing = () => {
                 {platformFeatures.map((feature) => (
                   <tr
                     key={feature}
-                    className="hover:bg-[#0015ff6b] transition-colors duration-150"
+                    className="hover:bg-[#ffd302] transition-colors duration-150"
                   >
                     <td className="p-4 font-extralight w-1/5">{feature}</td>
                     {pricingPlans.map((plan) => (

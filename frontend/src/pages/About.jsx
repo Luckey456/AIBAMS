@@ -1,34 +1,79 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+import defaultImage from "../assets/7fd6a598-ccc0-4e8b-93ff-48828d0016f6-removebg-preview.png"; // Ensure correct import
 
-const About = () => {
+const teamMembers = [
+  { name: "Nandan Pathak", role: "Full-Stack Developer" },
+  { name: "Shiv Gadway", role: "Full-Stack Developer" },
+  { name: "Vyonish Momaya", role: "Sales & Marketing" },
+  { name: "Himnish Parmar", role: "Tech Lead" },
+  { name: "Mohd. Shakib Raza", role: "CMO" },
+  { name: "Shubham Parmar", role: "Founder & CEO" },
+];
+
+const AboutPage = () => {
   return (
-    <div className="py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">About AIBAMS</h1>
-          <p className="text-xl text-gray-600">Leading the future of asset management with AI</p>
+    <div className="flex flex-col items-center text-center px-10 py-40">
+      {/* About Section */}
+      <div className="max-w-3xl mb-100">
+        <h1 className="text-5xl font-bold tracking-wider">About AIBAMS</h1>
+        <p className="text-2xl text-gray-100 mt-5 tracking-widest">Transforming Ideas into Digital Excellence</p>
+        <p className="text-gray-100 mt-10  tracking-widest">
+          SHDPIXEL is a visionary brand hub, bringing together diverse industries under one umbrella.
+          With innovative brands like Metamatrix Technologies, AIBAMS, and Broken Blind Pictures, 
+          we are constantly evolving and expanding into new domains. Our mission is to redefine 
+          possibilities by blending creativity, technology, and business innovation.
+        </p>
+      </div>
+
+      {/* Core Team Section */}
+      <div className="max-w-5xl w-full">
+        <h2 className="!text-5xl font-bold tracking-wider">Our Core Team</h2>
+        <p className="text-gray-100 mt-2 mb-8 tracking-wider">
+          A team of exceptional talent, united by a passion for innovation and excellence.
+        </p>
+
+        {/* Grid for Team Members */}
+        <div className="grid grid-cols-4 md:grid-cols-4 gap-8">
+          {teamMembers.slice(0, 4).map((member, index) => (
+            <motion.div
+              key={index}
+              className="bg-[#45454521] p-6 shadow-lg rounded-lg text-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <img
+                src={defaultImage}
+                alt={member.name}
+                className="  mx-auto mb-4 object-cover "
+              />
+              <h3 className="text-lg font-semibold">{member.name}</h3>
+              <p className="text-gray-200">{member.role}</p>
+            </motion.div>
+          ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-            <p className="text-gray-600 mb-6">
-              At AIBAMS, we're on a mission to revolutionize how businesses manage their assets. 
-              By combining cutting-edge AI technology with intuitive design, we're making asset 
-              management more efficient, intelligent, and accessible than ever before.
-            </p>
-          </div>
-          <div className="bg-gray-200 h-64 rounded-lg">
-            {/* Placeholder for team/office image */}
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {values.map((value, index) => (
-            <div key={index} className="p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-              <p className="text-gray-600">{value.description}</p>
-            </div>
+        {/* Last Two Members Centered */}
+        <div className="flex justify-center gap-8 mt-8">
+          {teamMembers.slice(4).map((member, index) => (
+            <motion.div
+              key={index}
+              className="bg-[#45454521] p-6 shadow-lg rounded-lg text-center w-64 border-2 border-gray-800"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <img
+                src={defaultImage}
+                alt={member.name}
+                className=" mx-auto mb-4 object-cover "
+              />
+              <h3 className="text-lg font-semibold">{member.name}</h3>
+              <p className="text-gray-200">{member.role}</p>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -36,19 +81,4 @@ const About = () => {
   );
 };
 
-const values = [
-  {
-    title: "Innovation",
-    description: "We constantly push the boundaries of what's possible with AI and asset management."
-  },
-  {
-    title: "Reliability",
-    description: "Our platform is built on robust technology you can count on, 24/7."
-  },
-  {
-    title: "Customer Focus",
-    description: "Your success is our success. We're committed to providing exceptional support."
-  }
-];
-
-export default About; 
+export default AboutPage;

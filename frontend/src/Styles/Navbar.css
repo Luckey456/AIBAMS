@@ -39,13 +39,17 @@ html {
   left: 0;
   top: 0;
   height: 100px;
-  width: 100%;
+  max-width: 100vw !important;   
+  width: 100vw !important;      /* Add this for maximum width */
   z-index: 1000;
   transition: top 0.3s, background-color 0.3s ease-in-out;
   position: static;
   animation: fadeIn 1s ease-out forwards;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;    /* Include padding in width calculation */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @keyframes slideDown {
@@ -233,7 +237,7 @@ html {
 
 .Login-button:hover span {
   display: inline-block;
-  color: #4e4ee3;
+  color: #fdd40e;
 }
 
 /* New CSS added below */
@@ -249,13 +253,13 @@ html {
   left: 0;
   bottom: 0;
   height: 2px;
-  background-color: #006ff7;
+  background-color: #fdd40e;
   width: 0;
   transition: width 0.3s ease;
 }
 
 .link-116:hover::after {
-  background-color: #006ff7;
+  background-color: #fdd40e;
   width: 100%;
   animation: heartbeat116 .5s ;
 }
@@ -263,7 +267,7 @@ html {
 @keyframes heartbeat116 {
   0%{
     width: 0%;
-    background-color: #006ff7;
+    background-color: #fdd40e;
 
   }
   
@@ -271,6 +275,35 @@ html {
    100% {
     
     width: 100%;
-    background-color: #006ff7;
+    background-color: #fdd40e;
+  }
+}
+@media (max-width: 768px) {
+  .primary-menu {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .menu-item {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .Login-button {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  #logoHeader {
+    margin: 0 auto;
+    padding: 10px;
   }
 }
