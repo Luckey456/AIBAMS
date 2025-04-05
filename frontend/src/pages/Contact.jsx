@@ -66,7 +66,7 @@ const AiBAMSContactPage = () => {
               <div className="form-row" data-aos="fade-up" data-aos-delay="100">
                 <div className="form-group">
                   <label htmlFor="name">
-                    Name <span className="required !text-[#002aff]">*</span>
+                    Name <span className="required !text-[#fad643]"> </span>
                   </label>
                   <input
                     type="text"
@@ -95,7 +95,7 @@ const AiBAMSContactPage = () => {
               <div className="form-row" data-aos="fade-up" data-aos-delay="200">
                 <div className="form-group">
                   <label htmlFor="email">
-                    Email <span className="required !text-[#002aff]">*</span>
+                    Email <span className="required !text-[#002aff]"> </span>
                   </label>
                   <input
                     type="email"
@@ -121,9 +121,9 @@ const AiBAMSContactPage = () => {
                 </div>
               </div>
 
-              <div className="form-group" data-aos="fade-up" data-aos-delay="300">
+              <div className="form-group" data-aos="fade-up" data-aos-delay="200">
                 <label htmlFor="subject">
-                  Subject <span className="required !text-[#002aff]">*</span>
+                  Subject <span className="required !text-[#002aff]"> </span>
                 </label>
                 <div className="select-wrapper">
                   <select
@@ -146,9 +146,9 @@ const AiBAMSContactPage = () => {
                 </div>
               </div>
 
-              <div className="form-group" data-aos="fade-up" data-aos-delay="400">
+              <div className="form-group" data-aos="fade-up" data-aos-delay="200">
                 <label htmlFor="companySize">
-                  Your company size <span className="required !text-[#002aff]">*</span>
+                  Your company size <span className="required !text-[#002aff]"> </span>
                 </label>
                 <input
                   type="text"
@@ -161,9 +161,9 @@ const AiBAMSContactPage = () => {
                 />
               </div>
 
-              <div className="form-group" data-aos="fade-up" data-aos-delay="500">
+              <div className="form-group" data-aos="fade-up" data-aos-delay="100">
                 <label htmlFor="question">
-                  Question <span className="required !text-[#002aff] ">*</span>
+                  Question <span className="required !text-[#002aff] "> </span>
                 </label>
                 <textarea
                   id="question"
@@ -176,27 +176,11 @@ const AiBAMSContactPage = () => {
                 ></textarea>
               </div>
 
-              <button 
-                type="submit"
-                className="relative h-12 px-8 rounded-lg overflow-hidden transition-all duration-500 group"
-                data-aos="fade-up"
-                data-aos-delay="600"
-              >
-                <div class="absolute inset-0 rounded-lg p-[2px] bg-gradient-to-b from-[#654358] via-[#17092A] to-[#2F0D64]">
-                  <div class="absolute inset-0 bg-[#170928] rounded-lg opacity-90"></div>
-                </div>
-                <div class="absolute inset-[2px] bg-[#170928] rounded-lg opacity-95"></div>
-                <div class="absolute inset-[2px] bg-gradient-to-r from-[#170928] via-[#1d0d33] to-[#170928] rounded-lg opacity-90"></div>
-                <div class="absolute inset-[2px] bg-gradient-to-b from-[#654358]/40 via-[#1d0d33] to-[#2F0D64]/30 rounded-lg opacity-80"></div>
-                <div class="absolute inset-[2px] bg-gradient-to-br from-[#C787F6]/10 via-[#1d0d33] to-[#2A1736]/50 rounded-lg"></div>
-                <div class="absolute inset-[2px] shadow-[inset_0_0_15px_rgba(199,135,246,0.15)] rounded-lg"></div>
-                <div class="relative flex items-center justify-center gap-2">
-                  <span class="text-lg font-normal bg-gradient-to-b from-[#ffffff] to-[#6c43e9] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(199,135,246,0.4)] tracking-tighter">
-                    Submit
-                  </span>
-                </div>
-                <div class="absolute inset-[2px] opacity-0 transition-opacity duration-300 bg-gradient-to-r from-[#2A1736]/20 via-[#C787F6]/10 to-[#2A1736]/20 group-hover:opacity-100 rounded-lg"></div>
+              <div className="mt-1">
+              <button className="bg-black text-[#fad643] font-bold py-[12px] px-6 rounded-full transition-all duration-200 ease-out hover:border-1 hover:border-white">
+                Book a Demo
               </button>
+            </div>
             </form>
           </div>
 

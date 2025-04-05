@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../Styles/PricingPage.css"; // Assumed CSS file for additional styling
 import Pricingcta from "../components/ui/Pricingcta.jsx"; // Assumed component
-import ButtonHero from "../components/ui/herosectionButton.jsx"; // Assumed component
+import ButtonHero from "../components/Button.jsx"; // Assumed component
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -213,9 +213,13 @@ const Pricing = () => {
                 ${plan.price[billingCycle]}{" "}
                 <span className="text-gray-500 text-lg">/ mo</span>
               </p>
-              <ButtonHero className="w-full mt-4 relative z-10">
-                Get started
+              <div className="mt-2 items-center ml-5 ">
+              <ButtonHero size="small">
+                
               </ButtonHero>
+
+              </div>
+              
             </div>
           ))}
         </div>
@@ -247,7 +251,7 @@ const Pricing = () => {
               ].map((feature) => (
                 <tr
                   key={feature}
-                  className="hover:bg-[#0015ff6b] transition-colors duration-150"
+                  className="hover:bg-[#faf1439a] transition-colors duration-150"
                 >
                   <td className="p-4 capitalize">
                     {feature.replace(/([A-Z])/g, " $1")}
@@ -275,7 +279,7 @@ const Pricing = () => {
                 {platformFeatures.map((feature) => (
                   <tr
                     key={feature}
-                    className="hover:bg-[#ffd302] transition-colors duration-150"
+                    className="hover:bg-[#faf1439a] transition-colors duration-150"
                   >
                     <td className="p-4 font-extralight w-1/5">{feature}</td>
                     {pricingPlans.map((plan) => (
@@ -288,7 +292,7 @@ const Pricing = () => {
                     ))}
                   </tr>
                 ))}
-                <tr className="hover:bg-[#0015ff6b] transition-colors duration-150">
+                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
                   <td className="p-4">Custom SSL certificate</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -307,7 +311,7 @@ const Pricing = () => {
                     </td>
                   ))}
                 </tr>
-                <tr className="hover:bg-[#0015ff6b] transition-colors duration-150">
+                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
                   <td className="p-4">Custom subdirectory install</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -336,7 +340,7 @@ const Pricing = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse table-fixed">
               <tbody>
-                <tr className="hover:bg-[#0015ff6b] transition-colors duration-150">
+                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
                   <td className="p-4 w-1/5">Product help</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -347,7 +351,7 @@ const Pricing = () => {
                     </td>
                   ))}
                 </tr>
-                <tr className="hover:bg-[#0015ff6b] transition-colors duration-150">
+                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
                   <td className="p-4">Concierge migration</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -366,7 +370,7 @@ const Pricing = () => {
                     </td>
                   ))}
                 </tr>
-                <tr className="hover:bg-[#0015ff6b] transition-colors duration-150">
+                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
                   <td className="p-4">Uptime SLA</td>
                   {pricingPlans.map((plan) => (
                     <td

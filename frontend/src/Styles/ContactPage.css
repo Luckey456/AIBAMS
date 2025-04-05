@@ -7,7 +7,7 @@
     --input-bg: #0a0a0a;
     --input-text: #e6e6e6;
     --input-placeholder: #666;
-    --required-color: #1100ff;
+    --required-color: #fad643;
     
     --background-color: #000;
   }
@@ -89,7 +89,7 @@
   }
   
   .required {
-    color: #1100ff;
+    color: #ff0000 !important;
   }
   
   input, select, textarea {

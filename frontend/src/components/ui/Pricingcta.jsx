@@ -40,19 +40,19 @@ const InteractiveFooterCTA = () => {
     <div className="w-full p-0 bg-black py-16  relative overflow-hidden">
       {/* Futuristic background elements */}
       <div className="relative inset-0 overflow-hidden opacity-30">
-        <div className="absolute w-64 h-64 bg-blue-500 rounded-full blur-3xl -top-20 -left-20"></div>
-        <div className="absolute w-96 h-96 bg-blue-600 rounded-full blur-3xl -bottom-40 -right-20"></div>
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-600"></div>
+        <div className="absolute w-64 h-64 bg-yellow-500 rounded-full blur-3xl -top-20 -left-20"></div>
+        <div className="absolute w-96 h-96 bg-yellow-600 rounded-full blur-3xl -bottom-40 -right-20"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-600"></div>
         
         {/* Grid lines */}
         <div className="absolute inset-0 flex justify-between">
           {[...Array(12)].map((_, i) => (
-            <div key={i} className="h-full w-px bg-blue-900 opacity-20"></div>
+            <div key={i} className="h-full w-px bg-yellow-900 opacity-20"></div>
           ))}
         </div>
         <div className="absolute inset-0 flex flex-col justify-between">
           {[...Array(6)].map((_, i) => (
-            <div key={i} className="w-full h-px bg-blue-900 opacity-20"></div>
+            <div key={i} className="w-full h-px bg-yellow-900 opacity-20"></div>
           ))}
         </div>
       </div>
@@ -69,7 +69,7 @@ const InteractiveFooterCTA = () => {
             data-aos-delay="100"
           >
             <h2 
-              className="text-[55px] md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600"
+              className="text-[55px] md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600"
             >
               Ready to launch into the future?
             </h2>
@@ -83,12 +83,12 @@ const InteractiveFooterCTA = () => {
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            <div className="bg-black bg-opacity-60 border border-blue-700 rounded-lg p-6 backdrop-blur-sm relative overflow-hidden">
+            <div className="bg-black bg-opacity-60 border border-yellow-700 rounded-lg p-6 backdrop-blur-sm relative overflow-hidden">
               <NoiseTexture />
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
                   <h3 
-                    className="text-blue-400 font-medium text-2xl text-center"
+                    className="text-yellow-400 font-medium text-2xl text-center"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -105,14 +105,14 @@ const InteractiveFooterCTA = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
-                      className="w-full bg-black border border-blue-700 rounded-md py-3 px-4 text-white placeholder-blue-300 placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full bg-black border border-yellow-700 rounded-md py-3 px-4 text-white placeholder-yellow-300 placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                       required
                     />
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-55 !mt-8 m-auto py-3 px-4 bg-[#3d6aff] hover:bg-blue-500 text-white font-medium rounded-md transition duration-200 flex items-center justify-center group"
+                    className="w-55 !mt-8 m-auto py-3 px-4 bg-[#fad643] hover:bg-yellow-500 text-white font-medium rounded-md transition duration-200 flex items-center justify-center group"
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                     data-aos="fade-up"
@@ -130,7 +130,7 @@ const InteractiveFooterCTA = () => {
                   </button>
                   
                   <p 
-                    className="text-blue-300 text-sm my-5 -mb-0.5 text-center"
+                    className="text-yellow-300 text-sm my-5 -mb-0.5 text-center"
                     data-aos="fade-up"
                     data-aos-delay="600"
                   >
@@ -143,16 +143,16 @@ const InteractiveFooterCTA = () => {
                   data-aos="zoom-in"
                   data-aos-delay="300"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-600 mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-blue-400">Thank you for signing up!</h3>
-                  <p className="text-blue-200">Check your inbox for next steps.</p>
+                  <h3 className="text-xl font-bold text-yellow-400">Thank you for signing up!</h3>
+                  <p className="text-yellow-200">Check your inbox for next steps.</p>
                   <button 
                     onClick={() => setSubmitted(false)}
-                    className="text-blue-400 underline text-sm mt-4"
+                    className="text-yellow-400 underline text-sm mt-4"
                   >
                     Go back
                   </button>

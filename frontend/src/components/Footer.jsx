@@ -122,8 +122,8 @@ function Footer({ heroRef }) {
             {[
               { name: "About", link: "#" },
               { name: "Careers", link: "#" },
-              { name: "Terms of Service", link: "#" },
-              { name: "Privacy policy", link: "#" },
+              { name: "Terms of Service", link: "/terms" },
+              { name: "Privacy policy", link: "/policy" },
               { name: "Sitemap", link: "#" },
             ].map((item, index) => (
               <li key={index}>

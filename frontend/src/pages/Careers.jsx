@@ -13,19 +13,19 @@ const CareersPage = () => {
   return (
     <div className="careers-page">
       {/* Hero Section */}
-      <div className="py-50 text-center">
-        <h1 className="!text-5xl font-bold">Careers</h1>
-        <p className="text-gray-500 text-lg mt-3">
+      <div className="mt-20 text-center">
+        <h1 className="text-[80px] font-semibold">Careers</h1>
+        <p className="text-gray-300 !text-[22px] mt-3">
           Join Us In Shaping The Future With Groundbreaking Innovations
         </p>
       </div>
 
       {/* Available Positions */}
-      <div className="mt-40 text-center">
-        <h2 className="text-4xl font-bold tracking-wider">Available Positions</h2>
-        <p className="text-gray-500 mt-5 mb-6">Explore our current job openings</p>
+      <div className="mt-40 text-center w-[80%] ">
+        {/* <h2 className="text-4xl font-bold tracking-wider">Available Positions</h2>
+        <p className="text-gray-500 mt-5 mb-6">Explore our current job openings</p> */}
 
-        <div className="grid grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-20">
+        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-20 ml-[10%]">
           {jobListings.map((job, index) => (
             <div
               key={index}

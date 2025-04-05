@@ -16,8 +16,8 @@ const AboutPage = () => {
     <div className="flex flex-col items-center text-center px-10 py-40">
       {/* About Section */}
       <div className="max-w-3xl mb-100">
-        <h1 className="text-5xl font-bold tracking-wider">About AIBAMS</h1>
-        <p className="text-2xl text-gray-100 mt-5 tracking-widest">Transforming Ideas into Digital Excellence</p>
+        <h1 className="text-[80px] font-bold tracking-wider">About AIBAMS</h1>
+        <p className="!text-[22px] text-gray-100 mt-5 tracking-widest">Transforming Ideas into Digital Excellence</p>
         <p className="text-gray-100 mt-10  tracking-widest">
           SHDPIXEL is a visionary brand hub, bringing together diverse industries under one umbrella.
           With innovative brands like Metamatrix Technologies, AIBAMS, and Broken Blind Pictures, 

@@ -223,13 +223,12 @@ html {
 }
 
 .Login-button {
-  background: #050505;
   border: none;
   padding: 10px 20px;
   display: inline-block;
   font-size: 15px;
   font-weight: 600;
-  color: #f0eded;
+  color: #fad643;
   width: 120px;
   text-transform: uppercase;
   cursor: pointer;
@@ -237,7 +236,7 @@ html {
 
 .Login-button:hover span {
   display: inline-block;
-  color: #fdd40e;
+  color: #ff9a00;
 }
 
 /* New CSS added below */

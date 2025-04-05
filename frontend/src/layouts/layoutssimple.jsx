@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import StarBackground from '../components/Stater';
 import BackgroundDots from "../components/ui/constantbg.jsx";
 import { useLocation } from 'react-router-dom';
 
-const MainLayout = ({ children, showStars = false, showBackground = false }) => {
+const TermsLayout = ({ children, showBackground = false }) => {
   const location = useLocation();
 
   // Scroll to top on route change
@@ -15,12 +13,10 @@ const MainLayout = ({ children, showStars = false, showBackground = false }) => 
 
   return (
     <div className="min-h-screen flex flex-col bg-secondary-500 relative overflow-hidden">
-      {showStars && <StarBackground />}
-      <Navbar />
       <div className="absolute inset-0 z-0">
         {showBackground && <BackgroundDots />}
       </div>
-      <main className="flex-grow w-full relative">
+      <main className="flex-grow w-full relative px-4 py-8 md:px-8 md:py-12">
         {children}
       </main>
       <Footer />
@@ -28,4 +24,4 @@ const MainLayout = ({ children, showStars = false, showBackground = false }) => 
   );
 };
 
-export default MainLayout;
+export default TermsLayout;
